@@ -3,7 +3,7 @@ import { Context } from "grammy";
 import { Effect } from "effect";
 import { FetchError, MpThreeService } from "../services/mpthree.ts";
 
-const tiktokRegex = /https?:\/\/(vm|vt)\.tiktok\.com\/[^\s]*/;
+const tiktokRegex = /https?:\/\/(www\.|vt\.|vn\.|vm\.)?tiktok\.com\/[^\s]+/;
 
 export class MpThreeController {
   static deleteWaiting = (c: Context, messageId: number) =>

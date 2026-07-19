@@ -67,7 +67,7 @@ export class MessageController {
     [tiktokFormatMiddleware],
     async (c: Context): Promise<void> => {
       const waiting = await c.reply("wait longitude...");
-      const tiktokRegex = /https?:\/\/(vm|vt)\.tiktok\.com\/[^\s]*/;
+      const tiktokRegex = /https?:\/\/(www\.|vt\.|vn\.|vm\.)?tiktok\.com\/[^\s]+/;
       const body = c.message?.text?.split(" ").find((b) => tiktokRegex.test(b));
 
       const program = Effect.gen(function* () {

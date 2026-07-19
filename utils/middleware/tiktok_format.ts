@@ -1,6 +1,6 @@
 import { Context } from "grammy";
 
-const tiktokRegex = /https?:\/\/(vt|vn|vm)\.tiktok\.com\/[a-zA-Z0-9]+/;
+const tiktokRegex = /https?:\/\/(www\.|vt\.|vn\.|vm\.)?tiktok\.com\/[^\s]+/;
 
 export async function tiktokFormatMiddleware(c: Context) {
   const text = c.message?.text ?? "";
